@@ -1,5 +1,5 @@
 class Solution {
-    public boolean hasValidPath(int[][] grid) {
+    public boolean ValidPath(int[][] grid) {
         int m = grid.length, n = grid[0].length;
 
         int[][][] dir = new int[7][][];
@@ -14,7 +14,7 @@ class Solution {
         boolean[][] vis = new boolean[m][n];
         Queue<int[]> q = new LinkedList<>();
 
-        q.offer(new int[] { 0, 0 });
+        q.add(new int[] { 0, 0 });
         vis[0][0] = true;
 
         while (!q.isEmpty()) {
@@ -34,7 +34,7 @@ class Solution {
                 for (int[] back : dir[grid[nr][nc]]) {
                     if (nr + back[0] == r && nc + back[1] == c) {
                         vis[nr][nc] = true;
-                        q.offer(new int[] { nr, nc });
+                        q.add(new int[] { nr, nc });
                     }
                 }
             }
