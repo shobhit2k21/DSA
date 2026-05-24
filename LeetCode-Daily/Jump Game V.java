@@ -1,8 +1,8 @@
 class Solution {
     private int solve(int ind, int[] dp, int[] arr, int d) {
-        if (dp[ind] != -1)   // always call recursion if it was visited it give solve ans 
+        if (dp[ind] != -1)   // always call recursion if it was visited, it will give solve ans 
             return dp[ind];  // never put condition before calling like if(dp[ind - i] == -1)
-                             // bcz if it fails you canot store the ans of repeated prblm as you dpnt call the funcion
+                             // bcz if it fails you canot store the ans of repeated prblm as you don't call the funcion
                              // so call every time and always check that visited condition at beginning
         int maxi = 0;
         boolean forw = true;
